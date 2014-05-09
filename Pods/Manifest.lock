@@ -1,0 +1,17 @@
+PODS:
+  - CocoaLumberjack (1.8.1):
+    - CocoaLumberjack/Extensions
+  - CocoaLumberjack/Core (1.8.1)
+  - CocoaLumberjack/Extensions (1.8.1):
+    - CocoaLumberjack/Core
+  - GPUImage (0.1.4)
+
+DEPENDENCIES:
+  - CocoaLumberjack (~> 1.8.0)
+  - GPUImage (~> 0.1.4)
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 020378ec400d658923bf5887178394f65f052c90
+  GPUImage: f9b32e12350792a630e596ffc7b050bea3662670
+
+COCOAPODS: 0.32.1
