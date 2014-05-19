@@ -20,4 +20,6 @@
 
 + (CGFloat) favouriteButtonLength;
 
++ (CGFloat) frameViewHeaderTitleHeight;
+
 @end

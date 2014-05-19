@@ -9,20 +9,21 @@
 #import "PhotoUtilities.h"
 #import <GPUImage.h>
 #import <GPUImageGaussianBlurFilter.h>
-#import <GPUImageGammaFilter.h>
+#import <GPUImageExposureFilter.h>
+#import <GPUImageBrightnessFilter.h>
 
 @implementation PhotoUtilities
 
 + (UIImage *) blurAndAlphaMaskImage:(UIImage *)image
 {
-    GPUImageGaussianBlurFilter *blurFilter = [GPUImageGaussianBlurFilter new];
+    GPUImageGaussianBlurFilter* blurFilter = [GPUImageGaussianBlurFilter new];
     blurFilter.blurRadiusInPixels = 12;
     image = [blurFilter imageByFilteringImage:image];
     
-    GPUImageGammaFilter* gammaFilter = [GPUImageGammaFilter new];
-    gammaFilter.gamma = 1.5;
-    image = [gammaFilter imageByFilteringImage:image];
-    
+    GPUImageExposureFilter* exposureFilter = [GPUImageExposureFilter new];
+    exposureFilter.exposure = -0.7;
+    image = [exposureFilter imageByFilteringImage:image];
+
     return image;
 }
 

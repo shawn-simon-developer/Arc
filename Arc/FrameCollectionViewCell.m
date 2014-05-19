@@ -66,7 +66,7 @@
     self.photoLocationLabel.adjustsFontSizeToFitWidth = YES;
     self.photoLocationLabel.numberOfLines = 2;
     self.photoLocationLabel.textAlignment = NSTextAlignmentLeft;
-    self.photoLocationLabel.text = @"Ontario, Canada";
+    self.photoLocationLabel.text = @"Hamilton, Ontario";
     [self.contentView addSubview:self.photoLocationLabel];
 }
 

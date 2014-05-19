@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class FrameModel;
 
 @interface FrameCollectionHeaderView : UICollectionReusableView
 
+@property (strong, nonatomic) FrameModel* frameModel;
 @property (strong, nonatomic) UIImageView* backgroundImageView;
 
 @end

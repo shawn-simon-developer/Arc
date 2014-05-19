@@ -38,5 +38,10 @@
     return 25;
 }
 
++ (CGFloat) frameViewHeaderTitleHeight
+{
+    // Prob don't go more then 50 doe.
+    return 50;
+}
 
 @end
