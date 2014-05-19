@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@class GPUImageView;
 
 @interface FrameCollectionHeaderView : UICollectionReusableView
 

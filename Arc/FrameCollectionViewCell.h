@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoModel.h"
 
 @interface FrameCollectionViewCell : UICollectionViewCell
+
+@property (strong, nonatomic) PhotoModel* photoModel;
 
 @end

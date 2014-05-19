@@ -12,10 +12,14 @@
 #import "FrameCollectionViewFlowLayout.h"
 #import "FrameCollectionHeaderView.h"
 
+#import "CosmeticUtilities.h"
+#import "ColorUtilities.h"
+
 @interface FrameCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) FrameCollectionView* frameCollectionView;
 @property (strong, nonatomic) FrameCollectionHeaderView* frameCollectionHeaderView;
+@property (strong, nonatomic) UIView* statusBarBackground;
 
 @end
 
@@ -28,6 +32,7 @@
 {
     [self overrideCollectionViewWithLayout];    
     [self classRegisters];
+    [self setupStatusBarBackground];
 }
 
 - (void) viewDidLoad
@@ -42,9 +47,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIStatusBarStyle) preferredStatusBarStyle {
+- (UIStatusBarStyle) preferredStatusBarStyle
+{
     
     return UIStatusBarStyleLightContent;
+}
+
+- (void) setupStatusBarBackground
+{
+    self.statusBarBackground = [CosmeticUtilities statusBarBackground];
+    [self.view addSubview:self.statusBarBackground];
 }
 
 #pragma - mark
@@ -57,13 +69,14 @@
     // UICollectionView Override.
     FrameCollectionViewFlowLayout* frameCollectionViewFlowLayout = [[FrameCollectionViewFlowLayout alloc] init];
     self.frameCollectionView = [[FrameCollectionView alloc] initWithFrame:[[UIScreen mainScreen] bounds] collectionViewLayout:frameCollectionViewFlowLayout];
-    [frameCollectionViewFlowLayout setHeaderReferenceSize:CGSizeMake(self.frameCollectionView.frame.size.width, 160)];
+    [frameCollectionViewFlowLayout setHeaderReferenceSize:CGSizeMake(self.frameCollectionView.frame.size.width, 100)];
     
     
     self.frameCollectionView.delegate = self;
     self.frameCollectionView.dataSource = self;
     
     [self.frameCollectionView setAlwaysBounceVertical:YES];
+    self.frameCollectionView.backgroundColor = [ColorUtilities flatDarkGrayColor];
     
     self.collectionView = self.frameCollectionView;
 }
@@ -89,8 +102,8 @@
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     FrameCollectionViewCell* frameCollectionViewCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"frameCell" forIndexPath:indexPath];
-    frameCollectionViewCell.backgroundColor = [UIColor whiteColor];
 
+    
     
     return frameCollectionViewCell;
 }
@@ -114,7 +127,12 @@
 
 - (CGSize) collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.width);
+    return CGSizeMake(self.collectionView.frame.size.width, self.collectionView.frame.size.width+[CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]/2);
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+{
+    return [CosmeticUtilities generalPadding]; 
 }
 
 #pragma - mark

@@ -26,6 +26,17 @@
 		C0CEBBD41910844200D28960 /* FrameCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CEBBD31910844200D28960 /* FrameCollectionViewCell.m */; };
 		C0CEBBD719108E1400D28960 /* FrameCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CEBBD619108E1400D28960 /* FrameCollectionHeaderView.m */; };
 		C0CEBBD91910A1D900D28960 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0CEBBD81910A1D900D28960 /* background.jpg */; };
+		C0CFD51D19297C3B00D51888 /* PhotoUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD51C19297C3B00D51888 /* PhotoUtilities.m */; };
+		C0CFD5211929848D00D51888 /* background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD5201929848D00D51888 /* background1.jpg */; };
+		C0CFD523192984C100D51888 /* background2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD522192984C100D51888 /* background2.jpg */; };
+		C0CFD5251929850700D51888 /* background-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD5241929850700D51888 /* background-small.jpg */; };
+		C0CFD5281929860500D51888 /* CosmeticUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD5271929860500D51888 /* CosmeticUtilities.m */; };
+		C0CFD52B1929895400D51888 /* ColorUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD52A1929895400D51888 /* ColorUtilities.m */; };
+		C0CFD52D1929B7C700D51888 /* favourited.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD52C1929B7C700D51888 /* favourited.png */; };
+		C0CFD52F1929BB9D00D51888 /* Arc.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD52E1929BB9D00D51888 /* Arc.png */; };
+		C0CFD531192A73E300D51888 /* notFavourited.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD530192A73E300D51888 /* notFavourited.png */; };
+		C0CFD537192A748900D51888 /* FrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD536192A748900D51888 /* FrameModel.m */; };
+		C0CFD53A192A759600D51888 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD539192A759600D51888 /* PhotoModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +78,22 @@
 		C0CEBBD519108E1400D28960 /* FrameCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameCollectionHeaderView.h; sourceTree = "<group>"; };
 		C0CEBBD619108E1400D28960 /* FrameCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameCollectionHeaderView.m; sourceTree = "<group>"; };
 		C0CEBBD81910A1D900D28960 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		C0CFD51B19297C3B00D51888 /* PhotoUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoUtilities.h; sourceTree = "<group>"; };
+		C0CFD51C19297C3B00D51888 /* PhotoUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoUtilities.m; sourceTree = "<group>"; };
+		C0CFD5201929848D00D51888 /* background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background1.jpg; sourceTree = "<group>"; };
+		C0CFD522192984C100D51888 /* background2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background2.jpg; sourceTree = "<group>"; };
+		C0CFD5241929850700D51888 /* background-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-small.jpg"; sourceTree = "<group>"; };
+		C0CFD5261929860500D51888 /* CosmeticUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CosmeticUtilities.h; sourceTree = "<group>"; };
+		C0CFD5271929860500D51888 /* CosmeticUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CosmeticUtilities.m; sourceTree = "<group>"; };
+		C0CFD5291929895400D51888 /* ColorUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorUtilities.h; sourceTree = "<group>"; };
+		C0CFD52A1929895400D51888 /* ColorUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorUtilities.m; sourceTree = "<group>"; };
+		C0CFD52C1929B7C700D51888 /* favourited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favourited.png; sourceTree = "<group>"; };
+		C0CFD52E1929BB9D00D51888 /* Arc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arc.png; sourceTree = "<group>"; };
+		C0CFD530192A73E300D51888 /* notFavourited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notFavourited.png; sourceTree = "<group>"; };
+		C0CFD535192A748900D51888 /* FrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameModel.h; sourceTree = "<group>"; };
+		C0CFD536192A748900D51888 /* FrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameModel.m; sourceTree = "<group>"; };
+		C0CFD538192A759600D51888 /* PhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
+		C0CFD539192A759600D51888 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
 		D49D4ED3ED134DA7992A852D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -130,9 +157,9 @@
 		C0CEBB9C19107AAA00D28960 /* Arc */ = {
 			isa = PBXGroup;
 			children = (
-				C0CEBBA519107AAA00D28960 /* AppDelegate.h */,
-				C0CEBBA619107AAA00D28960 /* AppDelegate.m */,
+				C0CFD51919297C1500D51888 /* AppDelegate */,
 				C0CEBBC819107DD200D28960 /* Frame */,
+				C0CFD51A19297C2300D51888 /* Utilities */,
 				C0CEBBA819107AAA00D28960 /* Images.xcassets */,
 				C0CEBB9D19107AAA00D28960 /* Supporting Files */,
 			);
@@ -142,6 +169,10 @@
 		C0CEBB9D19107AAA00D28960 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C0CFD532192A73FF00D51888 /* FrameViewAssets */,
+				C0CFD5241929850700D51888 /* background-small.jpg */,
+				C0CFD522192984C100D51888 /* background2.jpg */,
+				C0CFD5201929848D00D51888 /* background1.jpg */,
 				C0CEBBD81910A1D900D28960 /* background.jpg */,
 				C0CEBB9E19107AAA00D28960 /* Arc-Info.plist */,
 				C0CEBB9F19107AAA00D28960 /* InfoPlist.strings */,
@@ -172,18 +203,70 @@
 		C0CEBBC819107DD200D28960 /* Frame */ = {
 			isa = PBXGroup;
 			children = (
+				C0CFD534192A746F00D51888 /* FrameCollectionView */,
+				C0CFD533192A746800D51888 /* FrameModel */,
+			);
+			name = Frame;
+			sourceTree = "<group>";
+		};
+		C0CFD51919297C1500D51888 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				C0CEBBA519107AAA00D28960 /* AppDelegate.h */,
+				C0CEBBA619107AAA00D28960 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		C0CFD51A19297C2300D51888 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C0CFD51B19297C3B00D51888 /* PhotoUtilities.h */,
+				C0CFD51C19297C3B00D51888 /* PhotoUtilities.m */,
+				C0CFD5261929860500D51888 /* CosmeticUtilities.h */,
+				C0CFD5271929860500D51888 /* CosmeticUtilities.m */,
+				C0CFD5291929895400D51888 /* ColorUtilities.h */,
+				C0CFD52A1929895400D51888 /* ColorUtilities.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		C0CFD532192A73FF00D51888 /* FrameViewAssets */ = {
+			isa = PBXGroup;
+			children = (
+				C0CFD530192A73E300D51888 /* notFavourited.png */,
+				C0CFD52E1929BB9D00D51888 /* Arc.png */,
+				C0CFD52C1929B7C700D51888 /* favourited.png */,
+			);
+			name = FrameViewAssets;
+			sourceTree = "<group>";
+		};
+		C0CFD533192A746800D51888 /* FrameModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0CFD535192A748900D51888 /* FrameModel.h */,
+				C0CFD536192A748900D51888 /* FrameModel.m */,
+				C0CFD538192A759600D51888 /* PhotoModel.h */,
+				C0CFD539192A759600D51888 /* PhotoModel.m */,
+			);
+			name = FrameModel;
+			sourceTree = "<group>";
+		};
+		C0CFD534192A746F00D51888 /* FrameCollectionView */ = {
+			isa = PBXGroup;
+			children = (
 				C0CEBBC519107DCE00D28960 /* FrameCollectionViewController.h */,
 				C0CEBBC619107DCE00D28960 /* FrameCollectionViewController.m */,
 				C0CEBBC919107E0400D28960 /* FrameCollectionView.h */,
 				C0CEBBCA19107E0400D28960 /* FrameCollectionView.m */,
 				C0CEBBD21910844200D28960 /* FrameCollectionViewCell.h */,
 				C0CEBBD31910844200D28960 /* FrameCollectionViewCell.m */,
-				C0CEBBCF19107E3700D28960 /* FrameCollectionViewFlowLayout.h */,
-				C0CEBBD019107E3700D28960 /* FrameCollectionViewFlowLayout.m */,
 				C0CEBBD519108E1400D28960 /* FrameCollectionHeaderView.h */,
 				C0CEBBD619108E1400D28960 /* FrameCollectionHeaderView.m */,
+				C0CEBBCF19107E3700D28960 /* FrameCollectionViewFlowLayout.h */,
+				C0CEBBD019107E3700D28960 /* FrameCollectionViewFlowLayout.m */,
 			);
-			name = Frame;
+			name = FrameCollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +346,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CFD531192A73E300D51888 /* notFavourited.png in Resources */,
+				C0CFD52F1929BB9D00D51888 /* Arc.png in Resources */,
+				C0CFD52D1929B7C700D51888 /* favourited.png in Resources */,
 				C0CEBBD91910A1D900D28960 /* background.jpg in Resources */,
+				C0CFD5251929850700D51888 /* background-small.jpg in Resources */,
 				C0CEBBA119107AAA00D28960 /* InfoPlist.strings in Resources */,
+				C0CFD523192984C100D51888 /* background2.jpg in Resources */,
+				C0CFD5211929848D00D51888 /* background1.jpg in Resources */,
 				C0CEBBA919107AAA00D28960 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +406,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0CFD52B1929895400D51888 /* ColorUtilities.m in Sources */,
+				C0CFD537192A748900D51888 /* FrameModel.m in Sources */,
+				C0CFD53A192A759600D51888 /* PhotoModel.m in Sources */,
+				C0CFD5281929860500D51888 /* CosmeticUtilities.m in Sources */,
 				C0CEBBD719108E1400D28960 /* FrameCollectionHeaderView.m in Sources */,
+				C0CFD51D19297C3B00D51888 /* PhotoUtilities.m in Sources */,
 				C0CEBBD41910844200D28960 /* FrameCollectionViewCell.m in Sources */,
 				C0CEBBD119107E3700D28960 /* FrameCollectionViewFlowLayout.m in Sources */,
 				C0CEBBA719107AAA00D28960 /* AppDelegate.m in Sources */,

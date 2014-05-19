@@ -7,8 +7,7 @@
 //
 
 #import "FrameCollectionHeaderView.h"
-#import <GPUImageView.h>
-#import <GPUImage.h>
+#import "PhotoUtilities.h"
 
 @implementation FrameCollectionHeaderView
 
@@ -21,9 +20,10 @@
     if (self)
     {
         // Initialization code
-        self.backgroundColor = [UIColor redColor];
+        self.backgroundColor = [UIColor blackColor];
         self.backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-        self.backgroundImageView.image = [UIImage imageNamed:@"background.jpg"];
+        self.backgroundImageView.image = [UIImage imageNamed:@"background-small.jpg"];
+        self.backgroundImageView.image = [PhotoUtilities blurAndAlphaMaskImage:self.backgroundImageView.image];
         [self.backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
         [self.backgroundImageView setClipsToBounds:YES];
         [self.backgroundImageView setAutoresizingMask:UIViewAutoresizingFlexibleHeight];
@@ -35,5 +35,10 @@
 
 #pragma - mark
 /* LifeCycle */
+
+#pragma - mark HeaderViewSetup
+
+#pragma - mark
+/* HeaderViewSetup */
 
 @end
