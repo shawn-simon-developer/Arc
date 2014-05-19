@@ -1,4 +1,4 @@
-baseCollectionView
-==================
+Arc
+===
 
-Stripped down basic collection view.
+Arc developer repo.
