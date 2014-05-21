@@ -7,6 +7,7 @@
 //
 
 #import "FrameCollectionViewFlowLayout.h"
+#import "CosmeticUtilities.h"
 
 @interface FrameCollectionViewFlowLayout () <UICollectionViewDelegateFlowLayout>
 
@@ -28,29 +29,66 @@
 
 - (NSArray *) layoutAttributesForElementsInRect:(CGRect)rect
 {
+
     UICollectionView *collectionView = [self collectionView];
     UIEdgeInsets insets = [collectionView contentInset];
     CGPoint offset = [collectionView contentOffset];
     CGFloat minY = -insets.top;
+    // NSLog(@"%f, %f %f", offset.y, minY, [self headerReferenceSize].height);
     
     NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
     
-    if (offset.y < minY) {
+    if (self.isPulledDown != YES) {
+
+        if (offset.y <= [CosmeticUtilities headerPullDownBounds])
+        {
+            //[self.headerAnimationsDelegate headerOffsetAnimation];
+            [self.pullDownUpdateDelegate changeLayoutAfterPullDown];
+        }
+    
+        else if (offset.y < minY) {
         
-        CGSize  headerSize = [self headerReferenceSize];
+            CGSize  headerSize = [self headerReferenceSize];
         
-        CGFloat deltaY = fabsf(offset.y - minY);
+            CGFloat deltaY = fabsf(offset.y - minY);
         
-        for (UICollectionViewLayoutAttributes *attrs in attributes) {
+            for (UICollectionViewLayoutAttributes *attrs in attributes) {
             
-            if ([attrs representedElementKind] == UICollectionElementKindSectionHeader) {
+                if ([attrs representedElementKind] == UICollectionElementKindSectionHeader) {
                 
-                CGRect headerRect = [attrs frame];
-                headerRect.size.height = MAX(minY, headerSize.height + deltaY);
-                headerRect.origin.y = headerRect.origin.y - deltaY;
-                [attrs setFrame:headerRect];
-                break;
+                    CGRect headerRect = [attrs frame];
+                    headerRect.size.height = MAX(minY, headerSize.height + deltaY);
+                    headerRect.origin.y = headerRect.origin.y - deltaY;
+                    [attrs setFrame:headerRect];
+                    break;
+                }
             }
+        }
+    }
+    else
+    {
+        if (offset.y < minY) {
+            
+            CGSize  headerSize = [self headerReferenceSize];
+            
+            CGFloat deltaY = fabsf(offset.y - minY);
+            
+            for (UICollectionViewLayoutAttributes *attrs in attributes) {
+                
+                if ([attrs representedElementKind] == UICollectionElementKindSectionHeader) {
+                    
+                    CGRect headerRect = [attrs frame];
+                    headerRect.size.height = MAX(minY, headerSize.height + deltaY);
+                    headerRect.origin.y = headerRect.origin.y - deltaY;
+                    [attrs setFrame:headerRect];
+                    break;
+                }
+            }
+        }
+
+        if (offset.y >= -[CosmeticUtilities headerPullDownBounds])
+        {
+            //[self.pullDownUpdateDelegate changeLayoutAfterPushUp];
         }
     }
     

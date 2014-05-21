@@ -30,18 +30,33 @@
 
 + (CGFloat) arcLogoWidth
 {
-    return 20;
+    return 20.0;
 }
 
 + (CGFloat) favouriteButtonLength
 {
-    return 25;
+    return 25.0;
 }
 
 + (CGFloat) frameViewHeaderTitleHeight
 {
     // Prob don't go more then 50 doe.
-    return 50;
+    return 50.0;
+}
+
++ (CGFloat) headerPullDownBounds
+{
+    return -125.0;
+}
+
++ (CGFloat) frameViewStandardHeaderHeight
+{
+    return 100.0;
+}
+
++ (CGFloat) frameViewPulledDownHeaderHeight
+{
+    return 230.0;
 }
 
 @end

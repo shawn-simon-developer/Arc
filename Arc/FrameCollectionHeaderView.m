@@ -67,7 +67,7 @@
     self.frameTitleLabel.textAlignment = NSTextAlignmentCenter;
     self.frameTitleLabel.adjustsFontSizeToFitWidth = YES;
     self.frameTitleLabel.numberOfLines = 2;
-    self.frameTitleLabel.text = @"Event Name";
+    self.frameTitleLabel.text = @"Frame Name";
     
     [self addSubview:self.frameTitleLabel];
 }
@@ -102,5 +102,23 @@
 
 #pragma - mark
 /* HeaderViewSetup */
+
+#pragma - mark PullDownUpdateDelegate
+
+- (void) headerOffsetAnimation
+{
+    [UIView animateWithDuration: 1.0
+                          delay: 0.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         self.frame = CGRectMake(0, 0, self.frame.size.width, 200);
+
+                     }
+                     completion:^(BOOL completion){
+                     }];
+}
+
+#pragma - mark
+/* PullDownUpdateDelegate */
 
 @end

@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeaderAnimationsDelegate.h"
+#import "PullDownUpdateDelegate.h"
 
 @interface FrameCollectionViewFlowLayout : UICollectionViewFlowLayout
 
-@property (nonatomic) CGSize headerSize;
+@property (strong, nonatomic) id<HeaderAnimationsDelegate> headerAnimationsDelegate;
+@property (strong, nonatomic) id<PullDownUpdateDelegate> pullDownUpdateDelegate;
+@property (nonatomic) BOOL isPulledDown;
 
 @end

@@ -22,4 +22,9 @@
 
 + (CGFloat) frameViewHeaderTitleHeight;
 
++ (CGFloat) headerPullDownBounds;
+
++ (CGFloat) frameViewPulledDownHeaderHeight;
++ (CGFloat) frameViewStandardHeaderHeight;
+
 @end

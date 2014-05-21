@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeaderAnimationsDelegate.h"
 @class FrameModel;
 
-@interface FrameCollectionHeaderView : UICollectionReusableView
+@interface FrameCollectionHeaderView : UICollectionReusableView <HeaderAnimationsDelegate>
 
 @property (strong, nonatomic) FrameModel* frameModel;
 @property (strong, nonatomic) UIImageView* backgroundImageView;

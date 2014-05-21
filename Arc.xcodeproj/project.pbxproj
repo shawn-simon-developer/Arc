@@ -37,6 +37,7 @@
 		C0CFD531192A73E300D51888 /* notFavourited.png in Resources */ = {isa = PBXBuildFile; fileRef = C0CFD530192A73E300D51888 /* notFavourited.png */; };
 		C0CFD537192A748900D51888 /* FrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD536192A748900D51888 /* FrameModel.m */; };
 		C0CFD53A192A759600D51888 /* PhotoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFD539192A759600D51888 /* PhotoModel.m */; };
+		C0E0C523192CEA6B004F173B /* FrameDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0E0C522192CEA6B004F173B /* FrameDetailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		678790A222BA494A88996A2F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C0A499AC192C208400542348 /* HeaderAnimationsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderAnimationsDelegate.h; sourceTree = "<group>"; };
 		C0CEBB9319107AAA00D28960 /* Arc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CEBB9619107AAA00D28960 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0CEBB9819107AAA00D28960 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +96,10 @@
 		C0CFD536192A748900D51888 /* FrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameModel.m; sourceTree = "<group>"; };
 		C0CFD538192A759600D51888 /* PhotoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoModel.h; sourceTree = "<group>"; };
 		C0CFD539192A759600D51888 /* PhotoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoModel.m; sourceTree = "<group>"; };
+		C0CFD53B192AB24000D51888 /* PullDownUpdateDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PullDownUpdateDelegate.h; sourceTree = "<group>"; };
+		C0E0C521192CEA6B004F173B /* FrameDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameDetailView.h; sourceTree = "<group>"; };
+		C0E0C522192CEA6B004F173B /* FrameDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameDetailView.m; sourceTree = "<group>"; };
+		C0E0C524192CF075004F173B /* DetailViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewControllerDelegate.h; sourceTree = "<group>"; };
 		D49D4ED3ED134DA7992A852D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,6 +271,11 @@
 				C0CEBBD619108E1400D28960 /* FrameCollectionHeaderView.m */,
 				C0CEBBCF19107E3700D28960 /* FrameCollectionViewFlowLayout.h */,
 				C0CEBBD019107E3700D28960 /* FrameCollectionViewFlowLayout.m */,
+				C0E0C521192CEA6B004F173B /* FrameDetailView.h */,
+				C0E0C522192CEA6B004F173B /* FrameDetailView.m */,
+				C0CFD53B192AB24000D51888 /* PullDownUpdateDelegate.h */,
+				C0A499AC192C208400542348 /* HeaderAnimationsDelegate.h */,
+				C0E0C524192CF075004F173B /* DetailViewControllerDelegate.h */,
 			);
 			name = FrameCollectionView;
 			sourceTree = "<group>";
@@ -416,6 +427,7 @@
 				C0CEBBD119107E3700D28960 /* FrameCollectionViewFlowLayout.m in Sources */,
 				C0CEBBA719107AAA00D28960 /* AppDelegate.m in Sources */,
 				C0CEBBC719107DCE00D28960 /* FrameCollectionViewController.m in Sources */,
+				C0E0C523192CEA6B004F173B /* FrameDetailView.m in Sources */,
 				C0CEBBCB19107E0400D28960 /* FrameCollectionView.m in Sources */,
 				C0CEBBA319107AAA00D28960 /* main.m in Sources */,
 			);
