@@ -7,12 +7,15 @@
 //
 
 #import "FrameCollectionViewCell.h"
+#import "FrameCellPresenter.h"
 
 // Utilities.
 #import "CosmeticUtilities.h"
 #import "ColorUtilities.h"
 
 @interface FrameCollectionViewCell ()
+
+@property (strong, nonatomic) FrameCellPresenter* frameCellPresenter;
 
 @property (strong, nonatomic) UIImageView* photoImageView;
 
@@ -38,6 +41,7 @@
         self.photoModel = [[PhotoModel alloc] init];
         // ------------------
         self.backgroundColor = [UIColor whiteColor];
+        self.frameCellPresenter = [[FrameCellPresenter alloc] init];
         [self setupPhotoImageView];
         [self setupPhotoLocationLabel];
         [self setupArcButton];
@@ -54,18 +58,13 @@
 
 - (void) setupPhotoImageView
 {
-    self.photoImageView = [[UIImageView alloc] initWithFrame:CGRectMake([CosmeticUtilities generalPadding], [CosmeticUtilities generalPadding], self.contentView.frame.size.width-[CosmeticUtilities generalPadding]*2, self.contentView.frame.size.height-[CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]-[CosmeticUtilities generalPadding])];
-    self.photoImageView.backgroundColor = [ColorUtilities flatDarkGrayColor];
+    self.photoImageView = [self.frameCellPresenter setupPhotoImageViewFromFrame:self.contentView.frame];
     [self.contentView addSubview:self.photoImageView];
 }
 
 - (void) setupPhotoLocationLabel
 {
-    self.photoLocationLabel = [[UILabel alloc] initWithFrame:CGRectMake([CosmeticUtilities generalPadding], self.contentView.frame.size.height-[CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]+[CosmeticUtilities generalPadding], self.contentView.frame.size.width/2-[CosmeticUtilities generalPadding]*2-[CosmeticUtilities arcLogoWidth]/2, [CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]-[CosmeticUtilities generalPadding]*2)];
-    self.photoLocationLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:18];
-    self.photoLocationLabel.adjustsFontSizeToFitWidth = YES;
-    self.photoLocationLabel.numberOfLines = 2;
-    self.photoLocationLabel.textAlignment = NSTextAlignmentLeft;
+    self.photoLocationLabel = [self.frameCellPresenter setupPhotoLocationLabelFromFrame:self.contentView.frame];
     self.photoLocationLabel.text = @"Hamilton, Ontario";
     [self.contentView addSubview:self.photoLocationLabel];
 }
@@ -75,9 +74,8 @@
     // Placement dependency. Must order initializations correctly.
     assert(self.photoLocationLabel != nil);
     
-    self.arcButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.arcButton.frame = CGRectMake([CosmeticUtilities generalPadding]*2+self.photoLocationLabel.frame.size.width, self.contentView.frame.size.height-[CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]+[CosmeticUtilities generalPadding], [CosmeticUtilities arcLogoWidth], [CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]-[CosmeticUtilities generalPadding]*2);
-    [self.arcButton setBackgroundImage:[UIImage imageNamed:@"Arc.png"] forState:UIControlStateNormal];
+    self.arcButton = [self.frameCellPresenter setupArcButtonFromFrame:self.contentView.frame
+                                                     andRelativeFrame:self.photoLocationLabel.frame];
     [self.contentView addSubview:self.arcButton];
 }
 
@@ -86,29 +84,14 @@
     // Placement dependency. Must order initializations correctly.
     assert(self.photoLocationLabel != nil);
     
-    self.photoTimeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.photoLocationLabel.frame.size.width+[CosmeticUtilities arcLogoWidth]+[CosmeticUtilities generalPadding]*3, self.contentView.frame.size.height-[CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView] + [CosmeticUtilities generalPadding], self.photoLocationLabel.frame.size.width-[CosmeticUtilities favouriteButtonLength]-([CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]-[CosmeticUtilities favouriteButtonLength])/2, [CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]-[CosmeticUtilities generalPadding]*2)];
-    self.photoTimeLabel.font = [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:18];
-    self.photoTimeLabel.adjustsFontSizeToFitWidth = YES;
-    self.photoTimeLabel.numberOfLines = 1;
-    self.photoTimeLabel.textAlignment = NSTextAlignmentRight;
+    self.photoTimeLabel = [self.frameCellPresenter setupPhotoTimeLabelFromFrame:self.contentView.frame andRelativeFrame:self.photoLocationLabel.frame];
     self.photoTimeLabel.text = @"6:30 PM";
     [self.contentView addSubview:self.photoTimeLabel];
 }
 
 - (void) setupFavouritePhotoButton
 {
-    self.favouritePhotoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.favouritePhotoButton.frame = CGRectMake(self.contentView.frame.size.width-[CosmeticUtilities favouriteButtonLength]-[CosmeticUtilities generalPadding]*2, self.contentView.frame.size.height-[CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]+([CosmeticUtilities spaceAtBottomOfPhotoViewInFrameView]-[CosmeticUtilities favouriteButtonLength])/2, [CosmeticUtilities favouriteButtonLength], [CosmeticUtilities favouriteButtonLength]);
-    
-    if (self.photoModel.isFavourited == YES)
-    {
-        [self.favouritePhotoButton setBackgroundImage:[UIImage imageNamed:@"favourited.png"] forState:UIControlStateNormal];
-    }
-    else
-    {
-        [self.favouritePhotoButton setBackgroundImage:[UIImage imageNamed:@"notFavourited.png"] forState:UIControlStateNormal];
-    }
-    
+    self.favouritePhotoButton = [self.frameCellPresenter setupFavouriteButtonFromFrame:self.contentView.frame];
     [self.favouritePhotoButton addTarget:self action:@selector(photoFavouriteButtonPressed:)forControlEvents:UIControlEventTouchUpInside];
     
     [self.contentView addSubview:self.favouritePhotoButton];

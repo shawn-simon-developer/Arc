@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95D4B077AB164C70B4036FF1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D49D4ED3ED134DA7992A852D /* libPods.a */; };
+		C034F8C5194D557B001D9C1C /* FrameCellPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = C034F8C4194D557B001D9C1C /* FrameCellPresenter.m */; };
 		C0CEBB9719107AAA00D28960 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CEBB9619107AAA00D28960 /* Foundation.framework */; };
 		C0CEBB9919107AAA00D28960 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CEBB9819107AAA00D28960 /* CoreGraphics.framework */; };
 		C0CEBB9B19107AAA00D28960 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CEBB9A19107AAA00D28960 /* UIKit.framework */; };
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		678790A222BA494A88996A2F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C034F8C3194D557B001D9C1C /* FrameCellPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FrameCellPresenter.h; sourceTree = "<group>"; };
+		C034F8C4194D557B001D9C1C /* FrameCellPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FrameCellPresenter.m; sourceTree = "<group>"; };
 		C0A499AC192C208400542348 /* HeaderAnimationsDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderAnimationsDelegate.h; sourceTree = "<group>"; };
 		C0CEBB9319107AAA00D28960 /* Arc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Arc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CEBB9619107AAA00D28960 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +131,157 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C034F8B0194D4E43001D9C1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0CEBBC519107DCE00D28960 /* FrameCollectionViewController.h */,
+				C0CEBBC619107DCE00D28960 /* FrameCollectionViewController.m */,
+				C0CEBBCF19107E3700D28960 /* FrameCollectionViewFlowLayout.h */,
+				C0CEBBD019107E3700D28960 /* FrameCollectionViewFlowLayout.m */,
+				C0CEBBC919107E0400D28960 /* FrameCollectionView.h */,
+				C0CEBBCA19107E0400D28960 /* FrameCollectionView.m */,
+				C0CEBBD21910844200D28960 /* FrameCollectionViewCell.h */,
+				C0CEBBD31910844200D28960 /* FrameCollectionViewCell.m */,
+				C0CEBBD519108E1400D28960 /* FrameCollectionHeaderView.h */,
+				C0CEBBD619108E1400D28960 /* FrameCollectionHeaderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C034F8B1194D4E4D001D9C1C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		C034F8B2194D4E55001D9C1C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C034F8C3194D557B001D9C1C /* FrameCellPresenter.h */,
+				C034F8C4194D557B001D9C1C /* FrameCellPresenter.m */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		C034F8B3194D4E5C001D9C1C /* Enity */ = {
+			isa = PBXGroup;
+			children = (
+				C0CFD535192A748900D51888 /* FrameModel.h */,
+				C0CFD536192A748900D51888 /* FrameModel.m */,
+				C0CFD538192A759600D51888 /* PhotoModel.h */,
+				C0CFD539192A759600D51888 /* PhotoModel.m */,
+			);
+			name = Enity;
+			sourceTree = "<group>";
+		};
+		C034F8B4194D4E6A001D9C1C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
+		C034F8B5194D4F61001D9C1C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C034F8B6194D4F97001D9C1C /* View */,
+				C034F8BA194D4FC3001D9C1C /* Interactor */,
+				C034F8B9194D4FBC001D9C1C /* Presenter */,
+				C034F8B8194D4FB3001D9C1C /* Enity */,
+				C034F8B7194D4FAD001D9C1C /* Routing */,
+				C0CFD51A19297C2300D51888 /* Utilities */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		C034F8B6194D4F97001D9C1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C034F8B7194D4FAD001D9C1C /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		C034F8B8194D4FB3001D9C1C /* Enity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Enity;
+			sourceTree = "<group>";
+		};
+		C034F8B9194D4FBC001D9C1C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C0A499AC192C208400542348 /* HeaderAnimationsDelegate.h */,
+				C0CFD53B192AB24000D51888 /* PullDownUpdateDelegate.h */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		C034F8BA194D4FC3001D9C1C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		C034F8BB194D5082001D9C1C /* FrameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				C034F8C2194D5114001D9C1C /* View */,
+				C034F8C1194D5109001D9C1C /* Interactor */,
+				C034F8C0194D5105001D9C1C /* Presenter */,
+				C034F8BF194D50FE001D9C1C /* Enity */,
+				C034F8BE194D50F8001D9C1C /* Routing */,
+			);
+			name = FrameDetail;
+			sourceTree = "<group>";
+		};
+		C034F8BE194D50F8001D9C1C /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		C034F8BF194D50FE001D9C1C /* Enity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Enity;
+			sourceTree = "<group>";
+		};
+		C034F8C0194D5105001D9C1C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		C034F8C1194D5109001D9C1C /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Interactor;
+			sourceTree = "<group>";
+		};
+		C034F8C2194D5114001D9C1C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0E0C524192CF075004F173B /* DetailViewControllerDelegate.h */,
+				C0E0C521192CEA6B004F173B /* FrameDetailView.h */,
+				C0E0C522192CEA6B004F173B /* FrameDetailView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		C0CEBB8A19107AAA00D28960 = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				C0CFD51919297C1500D51888 /* AppDelegate */,
+				C034F8B5194D4F61001D9C1C /* Common */,
 				C0CEBBC819107DD200D28960 /* Frame */,
-				C0CFD51A19297C2300D51888 /* Utilities */,
+				C034F8BB194D5082001D9C1C /* FrameDetail */,
 				C0CEBBA819107AAA00D28960 /* Images.xcassets */,
 				C0CEBB9D19107AAA00D28960 /* Supporting Files */,
 			);
@@ -210,7 +365,6 @@
 			isa = PBXGroup;
 			children = (
 				C0CFD534192A746F00D51888 /* FrameCollectionView */,
-				C0CFD533192A746800D51888 /* FrameModel */,
 			);
 			name = Frame;
 			sourceTree = "<group>";
@@ -247,35 +401,14 @@
 			name = FrameViewAssets;
 			sourceTree = "<group>";
 		};
-		C0CFD533192A746800D51888 /* FrameModel */ = {
-			isa = PBXGroup;
-			children = (
-				C0CFD535192A748900D51888 /* FrameModel.h */,
-				C0CFD536192A748900D51888 /* FrameModel.m */,
-				C0CFD538192A759600D51888 /* PhotoModel.h */,
-				C0CFD539192A759600D51888 /* PhotoModel.m */,
-			);
-			name = FrameModel;
-			sourceTree = "<group>";
-		};
 		C0CFD534192A746F00D51888 /* FrameCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				C0CEBBC519107DCE00D28960 /* FrameCollectionViewController.h */,
-				C0CEBBC619107DCE00D28960 /* FrameCollectionViewController.m */,
-				C0CEBBC919107E0400D28960 /* FrameCollectionView.h */,
-				C0CEBBCA19107E0400D28960 /* FrameCollectionView.m */,
-				C0CEBBD21910844200D28960 /* FrameCollectionViewCell.h */,
-				C0CEBBD31910844200D28960 /* FrameCollectionViewCell.m */,
-				C0CEBBD519108E1400D28960 /* FrameCollectionHeaderView.h */,
-				C0CEBBD619108E1400D28960 /* FrameCollectionHeaderView.m */,
-				C0CEBBCF19107E3700D28960 /* FrameCollectionViewFlowLayout.h */,
-				C0CEBBD019107E3700D28960 /* FrameCollectionViewFlowLayout.m */,
-				C0E0C521192CEA6B004F173B /* FrameDetailView.h */,
-				C0E0C522192CEA6B004F173B /* FrameDetailView.m */,
-				C0CFD53B192AB24000D51888 /* PullDownUpdateDelegate.h */,
-				C0A499AC192C208400542348 /* HeaderAnimationsDelegate.h */,
-				C0E0C524192CF075004F173B /* DetailViewControllerDelegate.h */,
+				C034F8B0194D4E43001D9C1C /* View */,
+				C034F8B1194D4E4D001D9C1C /* Interactor */,
+				C034F8B2194D4E55001D9C1C /* Presenter */,
+				C034F8B3194D4E5C001D9C1C /* Enity */,
+				C034F8B4194D4E6A001D9C1C /* Router */,
 			);
 			name = FrameCollectionView;
 			sourceTree = "<group>";
@@ -419,6 +552,7 @@
 			files = (
 				C0CFD52B1929895400D51888 /* ColorUtilities.m in Sources */,
 				C0CFD537192A748900D51888 /* FrameModel.m in Sources */,
+				C034F8C5194D557B001D9C1C /* FrameCellPresenter.m in Sources */,
 				C0CFD53A192A759600D51888 /* PhotoModel.m in Sources */,
 				C0CFD5281929860500D51888 /* CosmeticUtilities.m in Sources */,
 				C0CEBBD719108E1400D28960 /* FrameCollectionHeaderView.m in Sources */,
